@@ -2,7 +2,6 @@ package com.example.restservice;
 
 import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonValueFormatVisitor;
 import org.springframework.web.bind.annotation.*;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,9 +11,7 @@ import java.net.URLConnection;
 @RestController
 @CrossOrigin
 public class RoutingController {
-
     private JsonValueFormatVisitor.Base Json;
-
     @RequestMapping(value = "/show",method = RequestMethod.GET)
     public String get() {
         String text= "Hello on my api !\nFor use the api, here is routes: \n /weather \n /insta \n /minecraft \n /beer\n /pokemon\n /zipcode \n /country \n /ip \n /word \n /about.JSON";

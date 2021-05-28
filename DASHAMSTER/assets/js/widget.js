@@ -45,10 +45,6 @@ function reload(e) {
     $("#case" + reloadId).html(get);
 }
 
-function myIP() {
-    url = "https://www.cloudflare.com/cdn-cgi/trace";
-}
-
 
 function add(e) {
     index++;

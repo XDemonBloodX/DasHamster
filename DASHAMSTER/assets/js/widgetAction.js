@@ -5,6 +5,7 @@ async function action(e) {
     let res = "";
     myHtml = "";
     value = "";
+    console.log(widgetCase, nbCase)
     console.table(widgetCase, nbCase)
     switch (widgetCase) {
         case "weather":
@@ -27,6 +28,7 @@ async function action(e) {
         case "localisation":
             theIp = $("#ipL" + nbCase).val();
             url = myUrl + "/ip?ip=" + theIp;
+            console.log(url)
             $.ajax({
                 type: 'GET',
                 dataType: 'json',
@@ -37,7 +39,8 @@ async function action(e) {
                         value.regionName,
                         value.city,
                         value.isp, value.query);
-                    $("#w" + nbCase).html(myHtml)
+                    $("#w" + nbCase).html(myHtml);
+                    console.log($("#w" + nbCase))
                 },
                 error: function() {
                     myHtml = "None";
